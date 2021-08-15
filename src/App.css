@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: Quicksand;
+}
+
+html {
+    height: 100%;
+    position: relative;
+}
+body {
+    min-height: 100%;
+    background-color: #4751C0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.customButton {
+    background: linear-gradient(90deg, #FFA67A 0%, #FF6065 100%);
+    border-radius: 14px;
+}
+
+.headText {
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
