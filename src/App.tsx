@@ -10,14 +10,10 @@ import EndGame from './Views/EndGame';
 function App(): JSX.Element {
   const results = useSelector((state: RootState) => state.question);
   const answers = useSelector((state: RootState) => state.answers);
-  let wrapperSelect = false;
-  if (answers.answers.length === results.results.length) {
-    wrapperSelect = true;
-  }
   return (
     <div>
       <div className="pt-8">
-        <Wrapper select={wrapperSelect}>
+        <Wrapper>
           {results.results.length === 1 && <Home />}
           {answers.answers.length !== results.results.length && results.results.length > 1
           && <Quiz />}
