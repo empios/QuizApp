@@ -15,15 +15,15 @@ const QuizForm: React.FunctionComponent<Props> = (props:Props) => {
   return (
     <div>
       <div className="row">
-        <h1 className="text-6xl lg:text-8xl" style={{ color: '#FF7878' }}>{quiz[current].category}</h1>
+        <h1 className="text-5xl lg:text-8xl" style={{ color: '#FF7878' }}>{quiz[current].category}</h1>
       </div>
       <div className="row mt-8">
-        <h1 className="text-lg lg:text-2xl" style={{ color: '#FF7878', letterSpacing: '20px' }}>
+        <h1 className="text-lg lg:text-2xl tracking-widest" style={{ color: '#FF7878' }}>
           Level:&nbsp;
           {quiz[current].difficulty}
         </h1>
       </div>
-      <div className="row mt-10 mx-40">
+      <div className="row mt-10 mx-20 lg:mx-40">
         <h1 className="text-left text-xl" style={{ color: 'white' }}>
           {getPercent()}
           %
@@ -36,7 +36,7 @@ const QuizForm: React.FunctionComponent<Props> = (props:Props) => {
         </div>
       </div>
       <div className="row mt-28 mb-28">
-        <h1 className="text-xl lg:text-3xl" style={{ color: 'white' }}>{parse(quiz[current].question)}</h1>
+        <h1 className="text-xl lg:text-3xl leading-4" style={{ color: 'white' }}>{parse(quiz[current].question)}</h1>
       </div>
     </div>
   );

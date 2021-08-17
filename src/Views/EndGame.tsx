@@ -7,6 +7,7 @@ import { CardProps } from '../Interfaces/CardProps';
 function EndGame(): JSX.Element {
   const answers = useSelector((state:RootState) => state.answers.answers);
   const quiz = useSelector((state:RootState) => state.question.results);
+  const generateRandomString = (length = 3): string => Math.random().toString(20).substr(2, length);
   let trueAnswers = 0;
   const mappedCards: Array<CardProps> = [];
   answers.map((item, index) => {
@@ -37,7 +38,7 @@ function EndGame(): JSX.Element {
         </h1>
       </div>
       <div className="row text-center">
-        {mappedCards.map((item) => <Card question={item.question} answer={item.answer} />)}
+        {mappedCards.map((item) => <Card key={`card${generateRandomString()}`} question={item.question} answer={item.answer} />)}
       </div>
       <div className="mt-24 row mx-24 md:mx-56 lg:mx-96 text-center">
         <button onClick={playAgain} className="customButton" type="button" style={{ width: '60%', height: '8vh' }}><b style={{ color: 'white' }}>Play Again</b></button>
